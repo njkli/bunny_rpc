@@ -76,11 +76,11 @@ module BunnyRpc
     end
 
     def reply_queue_name
-      "reply_to-#{rand(10)}"
+      "reply_to-#{SecureRandom.uuid}"
     end
 
     def correlation_id
-      "#{rand(10)}#{rand(10)}#{rand(10)}"
+      SecureRandom.uuid
     end
   end
 end
